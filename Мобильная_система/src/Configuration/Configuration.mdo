@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ecf003ea-d7a5-468b-aa36-6e59d993d783">
+  <name>Client</name>
+  <synonym>
+    <key>ru</key>
+    <value>Client</value>
+  </synonym>
+  <comment></comment>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="43f2c4a6-50b6-4ccd-a832-8075a11a4c61"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="8891e532-7b58-458d-97e3-ee054f3173ca"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="a81b1706-5da5-40df-bd0f-e9bab14db471"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="574ad423-6dfb-49e7-b077-d1622042112b"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="ae6434a4-2a7d-4760-80d5-c34d97e6f3a1"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="58c00d09-d055-414e-826c-a220ec8ac937"/>
+  <namePrefix></namePrefix>
+  <configurationExtensionCompatibilityMode>8.3.11</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>MobileDevice</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <vendor></vendor>
+  <version></version>
+  <updateCatalogAddress></updateCatalogAddress>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <interfaceCompatibilityMode>Version8_2</interfaceCompatibilityMode>
+  <compatibilityMode>8.3.11</compatibilityMode>
+  <languages uuid="cab6b913-82c1-4a7f-a00f-90d00be3412a">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <comment></comment>
+    <languageCode>ru</languageCode>
+  </languages>
+  <xDTOPackages>XDTOPackage.StructureForGetingAverage</xDTOPackages>
+  <webServices>WebService.CalcFunction</webServices>
+  <wsReferences>WSReference.ФункцииДляРасчета</wsReferences>
+  <commonForms>CommonForm.Форма</commonForms>
+  <catalogs>Catalog.Справочник1</catalogs>
+</mdclass:Configuration>

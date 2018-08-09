@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="ФункцииДляРасчета"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="СтруктураДляПолученияСреднего"
+		xmlns:xsd2="ФункцииДляРасчета"
+		name="ФункцииДляРасчета"
+		targetNamespace="ФункцииДляРасчета">
+	<types>
+		<xs:schema xmlns:tns="СтруктураДляПолученияСреднего"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				targetNamespace="СтруктураДляПолученияСреднего"
+				attributeFormDefault="unqualified"
+				elementFormDefault="qualified">
+			<xs:simpleType name="ОграниченнаяСтрока">
+				<xs:restriction base="xs:string">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="СтруктураДанных">
+				<xs:sequence>
+					<xs:element name="КоличествоЭлементовВМассиве"
+							type="xs:positiveInteger"/>
+					<xs:element name="Комментарий"
+							type="xsd1:ОграниченнаяСтрока"/>
+					<xs:element name="МассивЧисел"
+							type="xs:decimal"
+							maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:xs1="СтруктураДляПолученияСреднего"
+				xmlns:xs2="ФункцииДляРасчета"
+				targetNamespace="ФункцииДляРасчета"
+				elementFormDefault="qualified">
+			<xs:import namespace="СтруктураДляПолученияСреднего"/>
+			<xs:element name="ПолучитьСреднее">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="СтруктураДанных"
+								type="xsd1:СтруктураДанных"
+								nillable="true"/>
+						<xs:element name="СериализованнаяСтруктураДанных"
+								type="xs:string"
+								nillable="true"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ПолучитьСреднееResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="return"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</types>
+	<message name="ПолучитьСреднееRequestMessage">
+		<part name="parameters"
+				element="tns:ПолучитьСреднее"/>
+	</message>
+	<message name="ПолучитьСреднееResponseMessage">
+		<part name="parameters"
+				element="tns:ПолучитьСреднееResponse"/>
+	</message>
+	<portType name="ФункцииДляРасчетаPortType">
+		<operation name="ПолучитьСреднее">
+			<input name="ПолучитьСреднееRequest"
+					message="tns:ПолучитьСреднееRequestMessage"/>
+			<output name="ПолучитьСреднееResponse"
+					message="tns:ПолучитьСреднееResponseMessage"/>
+		</operation>
+	</portType>
+	<binding name="ФункцииДляРасчетаSoapBinding"
+			type="tns:ФункцииДляРасчетаPortType">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ПолучитьСреднее">
+			<soapbind:operation style="document"
+					soapAction="ФункцииДляРасчета#ФункцииДляРасчета:ПолучитьСреднее"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ФункцииДляРасчетаSoap12Binding"
+			type="tns:ФункцииДляРасчетаPortType">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ПолучитьСреднее">
+			<soap12bind:operation style="document"
+					soapAction="ФункцииДляРасчета#ФункцииДляРасчета:ПолучитьСреднее"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ФункцииДляРасчета">
+		<port name="ФункцииДляРасчетаSoap"
+				binding="tns:ФункцииДляРасчетаSoapBinding">
+			<documentation> 
+				<wsi:Claim xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+						conformsTo="http://ws-i.org/profiles/basic/1.1"/>
+			</documentation>
+			<soapbind:address location="http://127.0.0.1/MobileServer/ws/ФункцииДляРасчета.1cws"/>
+		</port>
+		<port name="ФункцииДляРасчетаSoap12"
+				binding="tns:ФункцииДляРасчетаSoap12Binding">
+			<soap12bind:address location="http://127.0.0.1/MobileServer/ws/ФункцииДляРасчета.1cws"/>
+		</port>
+	</service>
+</definitions>

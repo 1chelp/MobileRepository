@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WSReference xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="64a531a5-5005-482c-82c4-43242f57b4fa">
+  <producedTypes>
+    <managerType typeId="bd54d4e8-2cd8-4c74-a41e-3183e5d6be82" valueTypeId="31f33c44-ab83-4c07-831c-d4ae6d155270"/>
+  </producedTypes>
+  <name>ФункцииДляРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Функции для расчета</value>
+  </synonym>
+  <comment></comment>
+  <locationURL>http://127.0.0.1/MobileServer/ws/ФункцииДляРасчета.1cws?wsdl</locationURL>
+</mdclass:WSReference>

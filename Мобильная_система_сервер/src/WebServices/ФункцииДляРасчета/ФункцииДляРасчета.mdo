@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bac4398c-5a5d-4428-a3c9-3ee21e8bd3d4">
+  <name>ФункцииДляРасчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Функции для расчета</value>
+  </synonym>
+  <comment></comment>
+  <namespace>ФункцииДляРасчета</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.СтруктураДляПолученияСреднего</value>
+  </xdtoPackages>
+  <descriptorFileName>ФункцииДляРасчета.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="7c3e8b3a-506e-499a-9540-4ee89bc570c7">
+    <name>ПолучитьСреднее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить среднее</value>
+    </synonym>
+    <comment></comment>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьСреднее</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="1cf7fa72-2ef2-4471-ad17-55d8856b4a00">
+      <name>СтруктураДанных</name>
+      <synonym>
+        <key>ru</key>
+        <value>Структура данных</value>
+      </synonym>
+      <comment></comment>
+      <xdtoValueType>
+        <name>СтруктураДанных</name>
+        <nsUri>СтруктураДляПолученияСреднего</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="cbbe72ee-3d64-48fa-bf21-8c2fe1965f75">
+      <name>СериализованнаяСтруктураДанных</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сериализованная структура данных</value>
+      </synonym>
+      <comment></comment>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+</mdclass:WebService>

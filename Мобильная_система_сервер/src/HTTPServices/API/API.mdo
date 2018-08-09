@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="53ca508f-64fc-457f-be66-24ae1d0cf47b">
+  <name>API</name>
+  <synonym>
+    <key>ru</key>
+    <value>API</value>
+  </synonym>
+  <comment>API для взаимодействия с мобильным приложением</comment>
+  <rootURL>api</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="1ddd62ee-2812-4ef6-b336-4c86b74c5bfb">
+    <name>api_v1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Api v1</value>
+    </synonym>
+    <comment></comment>
+    <template>/v1/*</template>
+  </urlTemplates>
+</mdclass:HTTPService>

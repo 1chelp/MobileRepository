@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f8d26504-c8e5-45a2-a965-a98fef62d6b9">
+  <name>CalcFunction</name>
+  <synonym>
+    <key>ru</key>
+    <value>Calc function</value>
+  </synonym>
+  <comment></comment>
+  <namespace>CalcFunction</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.StructureForGetingAverage</value>
+  </xdtoPackages>
+  <descriptorFileName>CalcFunction.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="b9a8006d-2656-4024-abd4-7fd34dc0c259">
+    <name>ПолучитьСреднее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить среднее</value>
+    </synonym>
+    <comment></comment>
+    <xdtoReturningValueType>
+      <name>decimal</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПолучитьСреднее</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="c3cc7479-fc6b-4251-ac25-a75f53e21dc6">
+      <name>СтруктураДанных</name>
+      <synonym>
+        <key>ru</key>
+        <value>Структура данных</value>
+      </synonym>
+      <comment></comment>
+      <xdtoValueType>
+        <name>СтруктураДанных</name>
+        <nsUri>StructureForGetingAverage</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="8afc6c35-8f88-4a8f-adf0-ff1186dfde51">
+      <name>СериализованнаяСтруктураДанных</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сериализованная структура данных</value>
+      </synonym>
+      <comment></comment>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+</mdclass:WebService>

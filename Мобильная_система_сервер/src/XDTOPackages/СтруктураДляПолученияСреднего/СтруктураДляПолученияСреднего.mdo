@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:XDTOPackage xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9a47b016-0f99-4592-b399-3e4c4a5e061c">
+  <name>СтруктураДляПолученияСреднего</name>
+  <synonym>
+    <key>ru</key>
+    <value>Структура для получения среднего</value>
+  </synonym>
+  <comment></comment>
+  <namespace>СтруктураДляПолученияСреднего</namespace>
+</mdclass:XDTOPackage>

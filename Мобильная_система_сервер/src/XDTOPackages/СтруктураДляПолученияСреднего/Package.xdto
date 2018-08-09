@@ -1,0 +1,8 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="СтруктураДляПолученияСреднего">
+	<valueType name="ОграниченнаяСтрока" base="xs:string" minLength="1" maxLength="100"/>
+	<objectType name="СтруктураДанных">
+		<property name="КоличествоЭлементовВМассиве" type="xs:positiveInteger"/>
+		<property xmlns:d3p1="СтруктураДляПолученияСреднего" name="Комментарий" type="d3p1:ОграниченнаяСтрока"/>
+		<property name="МассивЧисел" type="xs:decimal" lowerBound="1" upperBound="-1"/>
+	</objectType>
+</package>
