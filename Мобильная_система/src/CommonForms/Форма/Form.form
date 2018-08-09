@@ -192,8 +192,10 @@
     <userVisible>
       <common>true</common>
     </userVisible>
-    <dataPath xsi:type="form:DataPath">
-      <segments>Ответ</segments>
+    <dataPath xsi:type="form:MultiLanguageDataPath">
+      <paths xsi:type="form:DataPath">
+        <segments>Ответ</segments>
+      </paths>
     </dataPath>
     <extendedTooltip>
       <name>ОтветРасширеннаяПодсказка</name>
